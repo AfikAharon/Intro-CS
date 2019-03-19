@@ -6,16 +6,13 @@ using System.Threading.Tasks;
 
 namespace Excercise_1{
     class FunctionsContainer {
-        public delegate void intDelegate(int val);
-        Dictionary<string, intDelegate> container = new Dictionary<String, intDelegate>();
-        public intDelegate this[string idx]
-        {
-            get
-            {
+        public delegate void doubleDelegate(int val);
+        private Dictionary<string, doubleDelegate> container = new Dictionary<String, doubleDelegate>();
+        public doubleDelegate this[string idx] {
+            get {
                 return container[idx];
             }
-            set
-            {
+            set {
                 container[idx] = value;
             }
         }
