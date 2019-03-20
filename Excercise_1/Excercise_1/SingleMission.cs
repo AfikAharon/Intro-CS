@@ -23,7 +23,9 @@ namespace Excercise_1 {
         public event EventHandler<double> OnCalculate;
 
         public double Calculate(double value) {
+            //activates the function.
             double result = function(value);
+            // invoke the OnCalculate EventHandler
             if (OnCalculate != null)
                 OnCalculate.Invoke(this, result);
             return result;
